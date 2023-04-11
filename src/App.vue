@@ -11,6 +11,7 @@ const Linguagens = ref('')
 const Biografia = ref('')
 const senha = ref('')
 const confirmaçao = ref('')
+const botao = ref('')
 
 
 
@@ -80,9 +81,15 @@ const confirmaçao = ref('')
       
     </div>
   </div>
+
 </form>
 
-<div><h4>dados usuario</h4>
+
+<button v-on:click="botao = true">mostrar dados do usuario</button>
+<button v-on:click="botao = false">limpar dados</button>
+
+<div v-if = "botao" >
+<h4>dados usuario</h4>
     <p>email digitado: {{ email }}</p>
 <p>nome digitado:{{ nome }}</p>
 <p>data de nascimento digitado:{{ dataN }}</p>
