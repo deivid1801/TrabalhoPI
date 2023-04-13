@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+
 const email = ref('')
 const nome = ref('')
 const dataN = ref('')
@@ -12,7 +13,19 @@ const Biografia = ref('')
 const senha = ref('')
 const confirmaçao = ref('')
 const botao = ref('')
-
+function limpardados (){
+  email.value = ""
+  nome.value = ""
+  dataN.value = ""
+  endereço.value = ""
+  cidade.value = ""
+  estado.value = ""
+  Hobbies.value = ""
+  Linguagens.value = ""
+  Biografia.value = ""
+  senha.value = ""
+  confirmaçao.value = ""
+}
 
 
 
@@ -35,7 +48,7 @@ const botao = ref('')
           placeholder="insira sua cidade">
      
 
-      <p>insira seu Estado</p>
+      <p><h6>insira seu Estado</h6>  </p>
 
      <select v-bind:value="estado" v-on:input="event => estado = event.target.value" class="form-select mt-3">
      <option>AC</option>
@@ -85,8 +98,9 @@ const botao = ref('')
 </form>
 
 
-<button v-on:click="botao = true">mostrar dados do usuario</button>
-<button v-on:click="botao = false">limpar dados</button>
+<button v-on:click="botao = true ">mostrar dados do usuario</button>
+<button @click="limpardados"> limpar dados</button>
+
 
 <div v-if = "botao" >
 <h4>dados usuario</h4>
