@@ -12,7 +12,7 @@ const Linguagens = ref('')
 const Biografia = ref('')
 const senha = ref('')
 const confirmaçao = ref('')
-const botao = ref('')
+const botaoDados = ref('')
 function limpardados (){
   email.value = ""
   nome.value = ""
@@ -25,6 +25,7 @@ function limpardados (){
   Biografia.value = ""
   senha.value = ""
   confirmaçao.value = ""
+  botaoDados.value = false
 }
 
 
@@ -98,11 +99,10 @@ function limpardados (){
 </form>
 
 
-<button v-on:click="botao = true ">mostrar dados do usuario</button>
+<button v-on:click="botaoDados = true ">mostrar dados do usuario</button>
 <button @click="limpardados"> limpar dados</button>
 
-
-<div v-if = "botao" >
+<div v-if = "botaoDados" >
 <h4>dados usuario</h4>
     <p>email digitado: {{ email }}</p>
 <p>nome digitado:{{ nome }}</p>
