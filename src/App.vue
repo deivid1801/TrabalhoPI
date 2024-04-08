@@ -34,7 +34,7 @@ function limpardados (){
 </script>
 
 <template>
-  <form>
+  <form class="edit">
   <div class="row">
     <div class="col">
       <input type="text" v-bind:value="email" v-on:input="event => email = event.target.value" class="form-control"
@@ -85,24 +85,21 @@ function limpardados (){
    <input type="text" v-bind:value="Linguagens" v-on:input="event => Linguagens = event.target.value" class="form-control" placeholder="insira suas Linguagens de programação
 ">
    <input type="text" v-bind:value="Biografia" v-on:input="event => Biografia = event.target.value" class="form-control" placeholder="insira sua Biografia">
-
+   <input type="password" v-bind:value="senha" v-on:input="event => senha = event.target.value" class="form-control" placeholder="insira sua senha" name="pswd">
+      <input type="password" v-bind:value="confirmaçao" v-on:input="event => 
+      confirmaçao = event.target.value" class="form-control" placeholder="confirmaçao de senha" name="pswd">
 
     </div>
-    <div class="col">
-      <input type="password" v-bind:value="senha" v-on:input="event => senha = event.target.value" class="form-control" placeholder="insira sua senha" name="pswd">
-      <input type="password" v-bind:value="confirmaçao" v-on:input="event => confirmaçao = event.target.value" class="form-control" placeholder="confirmaçao de senha" name="pswd">
-
-      
-    </div>
+   
   </div>
 
 </form>
 
 
-<button v-on:click="botaoDados = true ">mostrar dados do usuario</button>
-<button @click="limpardados"> limpar dados</button>
+<button v-on:click="botaoDados = true " class="bot1">mostrar dados do usuario</button>
+<button @click="limpardados" class="bot2"> limpar dados</button>
 
-<div v-if = "botaoDados" >
+<div v-if = "botaoDados" class="dados">
 <h4>dados usuario</h4>
     <p>email digitado: {{ email }}</p>
 <p>nome digitado:{{ nome }}</p>
@@ -120,5 +117,16 @@ function limpardados (){
 </template>
 
 <style scoped>
-
+.edit{
+ width: 1200px;
+  height: 480px;
+  margin-left: 300px;
+  background-color: aqua;
+}
+.bot1{
+  margin-left: 300px;
+}
+.dados{
+  margin-left: 300px;
+}
 </style>
