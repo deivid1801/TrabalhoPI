@@ -120,13 +120,18 @@ function limpardados (){
 .edit{
  width: 1200px;
   height: 480px;
-  margin-left: 300px;
+  margin-left: 200px;
   background-color: aqua;
 }
 .bot1{
-  margin-left: 300px;
+  margin-left: 200px;
 }
 .dados{
-  margin-left: 300px;
+  margin-left: 200px;
+  background-color:aqua;
+  margin-right: 130px;
+}
+.form-control{
+  font: italic;
 }
 </style>
