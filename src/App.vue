@@ -122,13 +122,25 @@ function limpardados (){
   height: 480px;
   margin-left: 200px;
   background-color: aqua;
+  margin-top: 40px;
+  border: 7px solid black;
+  border-radius: 20px;
 }
 .bot1{
   margin-left: 200px;
+  background-color: rgb(160, 165, 173);
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.bot2{
+  background-color: rgb(160, 165, 173);
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .dados{
   margin-left: 200px;
-  background-color:aqua;
+  background-color:rgb(187, 231, 231);
   margin-right: 130px;
 }
 .form-control{
