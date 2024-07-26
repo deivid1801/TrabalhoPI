@@ -73,7 +73,6 @@ function emitirMostrarDados() {
         <label for="estado">Estado:</label>
         <select id="estado" v-model="estado" class="form-select">
           <option value="" disabled>Selecione seu estado</option>
-          <!-- Lista de estados -->
           <option>AC</option>
           <option>AL</option>
           <option>AM</option>
