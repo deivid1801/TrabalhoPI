@@ -1,27 +1,3 @@
-<template>
-  <div id="app">
-    <h1 class="text-center">Meu Formulário de Dados</h1>
-    <FormularioComponent
-      @mostrarDados="handleMostrarDados"
-      @dadosLimpos="handleDadosLimpos"
-    />
-    <DadosUsuario
-      :email="dados.email"
-      :nome="dados.nome"
-      :dataN="dados.dataN"
-      :endereco="dados.endereco"
-      :cidade="dados.cidade"
-      :estado="dados.estado"
-      :hobbies="dados.hobbies"
-      :linguagens="dados.linguagens"
-      :biografia="dados.biografia"
-      :senha="dados.senha"
-      :confirmacao="dados.confirmacao"
-      :mostrar="mostrarDados"
-    />
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import FormularioComponent from './components/FormularioComponent.vue'
@@ -65,6 +41,29 @@ function handleDadosLimpos() {
   mostrarDados.value = false
 }
 </script>
+<template>
+  <div id="app">
+    <h1 class="text-center">Meu Formulário de Dados</h1>
+    <FormularioComponent
+      @mostrarDados="handleMostrarDados"
+      @dadosLimpos="handleDadosLimpos"
+    />
+    <DadosUsuario
+      :email="dados.email"
+      :nome="dados.nome"
+      :dataN="dados.dataN"
+      :endereco="dados.endereco"
+      :cidade="dados.cidade"
+      :estado="dados.estado"
+      :hobbies="dados.hobbies"
+      :linguagens="dados.linguagens"
+      :biografia="dados.biografia"
+      :senha="dados.senha"
+      :confirmacao="dados.confirmacao"
+      :mostrar="mostrarDados"
+    />
+  </div>
+</template>
 
 
 <style>

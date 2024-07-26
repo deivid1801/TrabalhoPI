@@ -1,3 +1,21 @@
+<script setup>
+import { defineProps } from 'vue'
+
+const props = defineProps({
+  email: String,
+  nome: String,
+  dataN: String,
+  endereco: String,
+  cidade: String,
+  estado: String,
+  hobbies: String,
+  linguagens: String,
+  biografia: String,
+  senha: String,
+  confirmacao: String,
+  mostrar: Boolean
+})
+</script>
 <template>
   <div v-if="mostrar" class="dados-container">
     <h2>Dados do Usuário</h2>
@@ -17,24 +35,6 @@
   </div>
 </template>
 
-<script setup>
-import { defineProps } from 'vue'
-
-const props = defineProps({
-  email: String,
-  nome: String,
-  dataN: String,
-  endereco: String,
-  cidade: String,
-  estado: String,
-  hobbies: String,
-  linguagens: String,
-  biografia: String,
-  senha: String,
-  confirmacao: String,
-  mostrar: Boolean
-})
-</script>
 
 
 <style scoped>

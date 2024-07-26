@@ -1,3 +1,51 @@
+<script setup>
+import { ref, defineEmits } from 'vue'
+
+const email = ref('')
+const nome = ref('')
+const dataN = ref('')
+const endereco = ref('')
+const cidade = ref('')
+const estado = ref('')
+const hobbies = ref('')
+const linguagens = ref('')
+const biografia = ref('')
+const senha = ref('')
+const confirmacao = ref('')
+
+const emit = defineEmits(['mostrarDados', 'dadosLimpos'])
+
+function limparDados() {
+  email.value = ""
+  nome.value = ""
+  dataN.value = ""
+  endereco.value = ""
+  cidade.value = ""
+  estado.value = ""
+  hobbies.value = ""
+  linguagens.value = ""
+  biografia.value = ""
+  senha.value = ""
+  confirmacao.value = ""
+  emit('dadosLimpos', { email: email.value, nome: nome.value, dataN: dataN.value, endereco: endereco.value, cidade: cidade.value, estado: estado.value, hobbies: hobbies.value, linguagens: linguagens.value, biografia: biografia.value, senha: senha.value, confirmacao: confirmacao.value })
+}
+
+function emitirMostrarDados() {
+  emit('mostrarDados', {
+    email: email.value,
+    nome: nome.value,
+    dataN: dataN.value,
+    endereco: endereco.value,
+    cidade: cidade.value,
+    estado: estado.value,
+    hobbies: hobbies.value,
+    linguagens: linguagens.value,
+    biografia: biografia.value,
+    senha: senha.value,
+    confirmacao: confirmacao.value
+  })
+}
+</script>
 <template>
   <div class="form-container">
     <form class="edit">
@@ -82,55 +130,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref, defineEmits } from 'vue'
-
-const email = ref('')
-const nome = ref('')
-const dataN = ref('')
-const endereco = ref('')
-const cidade = ref('')
-const estado = ref('')
-const hobbies = ref('')
-const linguagens = ref('')
-const biografia = ref('')
-const senha = ref('')
-const confirmacao = ref('')
-
-const emit = defineEmits(['mostrarDados', 'dadosLimpos'])
-
-function limparDados() {
-  email.value = ""
-  nome.value = ""
-  dataN.value = ""
-  endereco.value = ""
-  cidade.value = ""
-  estado.value = ""
-  hobbies.value = ""
-  linguagens.value = ""
-  biografia.value = ""
-  senha.value = ""
-  confirmacao.value = ""
-  emit('dadosLimpos', { email: email.value, nome: nome.value, dataN: dataN.value, endereco: endereco.value, cidade: cidade.value, estado: estado.value, hobbies: hobbies.value, linguagens: linguagens.value, biografia: biografia.value, senha: senha.value, confirmacao: confirmacao.value })
-}
-
-function emitirMostrarDados() {
-  emit('mostrarDados', {
-    email: email.value,
-    nome: nome.value,
-    dataN: dataN.value,
-    endereco: endereco.value,
-    cidade: cidade.value,
-    estado: estado.value,
-    hobbies: hobbies.value,
-    linguagens: linguagens.value,
-    biografia: biografia.value,
-    senha: senha.value,
-    confirmacao: confirmacao.value
-  })
-}
-</script>
 
 <style scoped>
 .form-container {
